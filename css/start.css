@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+:root{
+    --rubikFont: "Rubik", sans-serif;
+    --paytoneFont: "Paytone One", sans-serif;
+    --preto: #000;
+    --cinza: #676767;
+    --branco: #DDDDDD;
+    --vermelho: #C02F26;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    max-width: 1920px;
+    min-height: 100vh;
+    /* height: 200vh; */
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: var(--rubikFont);
+}
+/* body button:focus{
+    outline: 2px solid var(--vermelho);
+    opacity: 1;
+} */
+h2{
+    font-weight: 600;
+}
+.logoName{
+    font-family: var(--paytoneFont);
+    font-weight: 500;
+    font-size: 1.8rem;
+    border: none;
+    color: var(--branco);
+    background-color: transparent;
+    cursor: pointer;
+}
+/* Icones */
+.iconBtn{
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    border: none;
+    /* padding: 5px; */
+    cursor: pointer;
+    background-color: var(--branco);
+    opacity: .5;
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconBtn svg{
+    fill: var(--preto);
+    height: 22px;
+    width: 22px;
+}
+.iconBtn:hover{
+    opacity: 1;
+}
+.sectionFoco{
+    opacity: 1;
+}
+
+/* Header */
+header{
+    /* border: 1px solid red; */
+    position: fixed;
+    top: 0;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    z-index: 100;
+    background-color: var(--preto);
+}
+header .sectionSearchBar{
+    position: relative;
+    /* border: 1px solid red; */
+    height: 40px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px 0 5px;
+}
+header .sectionSearchBar #btnSearch{
+    z-index: 5;
+}
+header .sectionSearchBar form .searchBarInput{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--branco);
+    border-radius: 40px;
+    padding: 0 40px 0 40px;
+    font-size: 15px;
+    font-family: var(--rubikFont);
+    font-weight: 400;
+    color: var(--preto);
+    border: 2px solid transparent;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+    display: none;
+}
+header .sectionSearchBar form .searchBarInput::placeholder{
+    color: var(--cinza);
+}
+header .sectionSearchBar form .searchBarInput:focus{
+    outline: none;
+    border-color: var(--cinza);
+}
+header .sectionSearchBar form .btnIconX{
+    position: relative;
+    z-index: 5;
+    /* margin-right: 5px; */
+    background-color: var(--branco);
+    /* opacity: 1; */
+    visibility: hidden;
+}
+/* Aside */
+aside{
+    /* border: 1px solid red; */
+    position: fixed;
+    left: 0;
+    top: 15vh;
+    height: 100vh;
+    /* width: 120px; */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding-left: 40px;
+    /* margin-left: 40px; */
+    padding-top: 10px;
+    z-index: 100;
+    background-color: var(--preto);
+}
+aside .sectionMenu{
+    border: 2px solid var(--cinza);
+    padding: 8px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 50px;
+}
+
+/* Main */
+main{
+    /* width: 100vw; */
+    position: absolute;
+    top: 15vh;
+    left: 97px;
+    right: 0;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 50px;
+}

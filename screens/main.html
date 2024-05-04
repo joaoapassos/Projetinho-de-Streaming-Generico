@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Generico</title>
+    <link rel="shortcut icon" href="../icons/logo streaming generico.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/start.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <button class="logoName" onclick="returnIndex()">Streaming Generico</button>
+        <section class="sectionSearchBar">
+            <button class="iconBtn" id="btnSearch" name="btnSearch" onclick="">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                </i>
+            </button>
+            <form action="" method="get">
+                <button type="reset" class="iconBtn btnIconX" id="btnXSearch" title="Limpar Pesquisa" name="btnXSearch">
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                    </i>
+                </button>
+                <input type="search" class="searchBarInput" placeholder="Pesquise..." name="searchBarInput">
+            </form>
+        </section>
+    </header>
+    <aside>
+        <section class="sectionMenu">
+            <button class="iconBtn sectionFoco" id="btnHome" title="Inicio">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z"/></svg>
+                </i>
+            </button>
+            <button class="iconBtn" id="btnCategories" title="Categorias">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m460-380 280-180-280-180v360ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+                </i>
+            </button>
+            <button class="iconBtn" id="btnSettings" title="Configurações">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
+                </i>
+            </button>
+        </section>
+    </aside>
+    <main>
+        <section class="sectionShowCatTitles" id="">
+            <h2 class="titleCatTitles" id="">Adicionados recentimente:</h2>
+            <div class="btnsNextAndBack">
+                <button class="iconBtn btnBack">
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                    </i>
+                </button>
+                <button class="iconBtn btnNext">
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                    </i>
+                </button>
+            </div>
+            <section class="sectionCardTitles" id="">
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+                <button class="cardTitles" id="" title="Title of film or serie">
+                    <!-- <img src="../imgs/poster img examplo.jpeg" alt="" class="imgOfTitle" id=""> -->
+                </button>
+            </section>
+        </section>
+    </main>
+
+
+    <script src="../js/header.js"></script>
+</body>
+</html>
